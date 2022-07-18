@@ -45,7 +45,9 @@ const PostContent = () => {
             <span>{data.data.post.date}</span>
             <ul className={styles.tags}>
               {data.data.post.tags.map(({ id, name }) => (
-                <li key={id}>{name}</li>
+                <li key={id}>
+                  <Link to={`/tags/${id}`}>{name}</Link>
+                </li>
               ))}
             </ul>
           </div>

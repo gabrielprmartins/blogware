@@ -26,11 +26,16 @@
   font-size: 0.875rem;
 }
 
-.tags li {
+.tags li a {
   color: var(--blue);
 }
 
+.tags li a:hover {
+  text-decoration: underline;
+}
+
 .content h2 {
+  font-size: 1.6rem;
   color: var(--blue);
   margin-bottom: 1rem;
 }
@@ -40,9 +45,9 @@
 }
 
 .content p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5rem;
-  color: var(--gray-2);
+  color: var(--gray-1);
 }
 
 .content p + p {
@@ -69,5 +74,11 @@
   }
   .postTitle {
     margin-bottom: 1rem;
+  }
+  .content h2 {
+    font-size: 1.5rem;
+  }
+  .content p {
+    font-size: 1rem;
   }
 }

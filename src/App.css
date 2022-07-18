@@ -25,12 +25,13 @@ ul {
 }
 
 .container {
-  max-width: 40rem;
+  max-width: 43.75rem;
   padding: 0 1.25rem;
   margin: 0 auto;
 }
 
 .title {
+  font-weight: bold;
   font-size: 3rem;
   margin: 2rem 0;
   color: var(--gray-1);
