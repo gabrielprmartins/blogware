@@ -1,26 +1,60 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import API_GET from "../../api";
+import useFetch from "../../Hooks/useFetch";
+import Loading from "../Helpers/Loading";
+import Error from "../Helpers/Error";
 import styles from "./PostsList.module.css";
 
+const GET_POST_LIST = `
+  query GetPostList {
+    posts {
+      id
+      title
+      date
+      slug
+      showcase {
+        text
+      }
+      tags {
+        id
+        name
+      }
+    }
+  }
+`;
+
 const PostsList = () => {
-  return (
-    <section className={styles.posts}>
-      <div className={styles.post}>
-        <span>19 de julho de 2022</span>
-        <h2>Usar muitas bibliotecas é bom ou não para uma aplicação web?</h2>
-        <p>
-          Um dos ponto primordiais criticados a respeito do uso das bibliotecas,
-          é sobre afetar negativamente no desempenho de uma aplicação web.
-          Algumas das afirmações, é de as chamadas por códigos nativos dos
-          browsers são muiito mais performáticos. E isso é verdade, porém...
-        </p>
-        <ul className={styles.tags}>
-          <li>Guia</li>
-          <li>Javascript</li>
-          <li>Biblioteca</li>
-        </ul>
-      </div>
-    </section>
-  );
+  const { data, error, loading, request } = useFetch();
+
+  React.useEffect(() => {
+    async function fetchData() {
+      const { url, options } = API_GET(GET_POST_LIST);
+      request(url, options);
+    }
+    fetchData();
+  }, []);
+
+  if (loading) return <Loading />;
+  if (error) return <Error error={error} />;
+  if (data)
+    return (
+      <section className={styles.posts}>
+        {data.data.posts.map(({ id, date, title, showcase, tags, slug }) => (
+          <Link to={`/post/${slug}`} className={styles.post} key={id}>
+            <span>{date}</span>
+            <h2>{title}</h2>
+            <p>{showcase.text}</p>
+            <ul className={styles.tags}>
+              {tags.map(({ name, id }) => (
+                <li key={id}>{name}</li>
+              ))}
+            </ul>
+          </Link>
+        ))}
+      </section>
+    );
+  else return null;
 };
 
 export default PostsList;
