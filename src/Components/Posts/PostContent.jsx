@@ -51,7 +51,10 @@ const PostContent = () => {
           </div>
         </div>
 
-        <div className={styles.content}>{data.data.post.content.html}</div>
+        <div
+          className={styles.content}
+          dangerouslySetInnerHTML={{ __html: data.data.post.content.html }}
+        />
 
         <div className={styles.goToRecentPosts}>
           <Link to="/">← Voltar para posts recentes</Link>
