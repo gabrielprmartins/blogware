@@ -20,7 +20,28 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
 .container {
   max-width: 40rem;
+  padding: 0 1.25rem;
   margin: 0 auto;
+}
+
+.title {
+  font-size: 3rem;
+  margin: 2rem 0;
+  color: var(--gray-1);
+}
+
+.subtitle {
+  display: block;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--blue);
+  border-bottom: 1px solid var(--blue);
+  padding-bottom: 0.8rem;
+  margin-bottom: 1.5rem;
 }

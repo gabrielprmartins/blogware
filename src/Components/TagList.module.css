@@ -1,0 +1,15 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+}
+
+.tags li a {
+  color: var(--blue);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.tags li a:hover {
+  text-decoration: underline;
+}
