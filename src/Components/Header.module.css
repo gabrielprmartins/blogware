@@ -13,7 +13,7 @@
 .headerContainer a {
   display: block;
   transition: 0.2s;
-  border-bottom: 2px solid transparent;
+  border-bottom: 1px solid transparent;
   padding: 2rem;
 }
 
@@ -21,6 +21,10 @@
   border: none;
   padding: 2rem 0 calc(0.9rem + 2px);
 } 
+
+.headerContainer a:nth-child(2) {
+  margin-bottom: -4px;
+}
 
 .headerContainer a:hover,
 .headerContainer a:global(.active) {

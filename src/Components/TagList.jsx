@@ -4,7 +4,7 @@ import API_GET from "../api";
 import styles from "./TagList.module.css";
 import Loading from "./Helpers/Loading";
 import Error from "./Helpers/Error";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const GET_TAGS = `
   query GetTags {
@@ -33,7 +33,7 @@ const TagList = () => {
       <ul className={styles.tags}>
         {data.data.tags.map(({ id, name }) => (
           <li key={id}>
-            <Link to="/">{name}</Link>
+            <NavLink to={`/tags/${id}`}>{name}</NavLink>
           </li>
         ))}
       </ul>

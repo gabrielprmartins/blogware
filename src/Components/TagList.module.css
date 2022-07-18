@@ -1,10 +1,13 @@
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem 2rem;
+  gap: 1rem 0;
+  margin-bottom: 2rem;
 }
 
 .tags li a {
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.25rem;
   color: var(--blue);
   text-transform: uppercase;
   font-weight: bold;
@@ -12,4 +15,10 @@
 
 .tags li a:hover {
   text-decoration: underline;
+}
+
+.tags li a:global(.active) {
+  transition: 0.1s;
+  background-color: var(--blue);
+  color: var(--white-1);
 }

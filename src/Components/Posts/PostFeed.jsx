@@ -1,10 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import API_GET from "../../api";
 import useFetch from "../../Hooks/useFetch";
 import Loading from "../Helpers/Loading";
 import Error from "../Helpers/Error";
-import styles from "./PostsList.module.css";
+import PostList from "./PostList";
 
 const GET_POST_LIST = `
   query GetPostList {
@@ -24,7 +23,7 @@ const GET_POST_LIST = `
   }
 `;
 
-const PostsList = () => {
+const PostFeed = () => {
   const { data, error, loading, request } = useFetch();
 
   React.useEffect(() => {
@@ -37,24 +36,8 @@ const PostsList = () => {
 
   if (loading) return <Loading />;
   if (error) return <Error error={error} />;
-  if (data)
-    return (
-      <section className={styles.posts}>
-        {data.data.posts.map(({ id, date, title, showcase, tags, slug }) => (
-          <Link to={`/post/${slug}`} className={styles.post} key={id}>
-            <span>{date}</span>
-            <h2>{title}</h2>
-            <p>{showcase.text}</p>
-            <ul className={styles.tags}>
-              {tags.map(({ name, id }) => (
-                <li key={id}>{name}</li>
-              ))}
-            </ul>
-          </Link>
-        ))}
-      </section>
-    );
+  if (data) return <PostList data={data.data} />;
   else return null;
 };
 
-export default PostsList;
+export default PostFeed;
