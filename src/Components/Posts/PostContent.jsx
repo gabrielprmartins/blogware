@@ -5,12 +5,16 @@ import useFetch from "../../Hooks/useFetch";
 import API_GET from "../../api";
 import Loading from "../Helpers/Loading";
 import Error from "../Helpers/Error";
+import Head from "../Head";
 
 const GET_POST_BY_SLUG = `
   query GetPostBySlug($slug: String) {
     post(where: {slug: $slug}) {
       date
       title
+      showcase {
+        text
+      }
       tags {
         id
         name
@@ -39,6 +43,10 @@ const PostContent = () => {
   if (data)
     return (
       <>
+        <Head
+          title={data.data.post.title}
+          description={data.data.post.showcase.text}
+        />
         <div className={styles.postTitle}>
           <h1 className="title">{data.data.post.title}</h1>
           <div className={styles.postInfo}>

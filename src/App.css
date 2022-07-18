@@ -53,3 +53,16 @@ ul {
   padding-bottom: 0.8rem;
   margin-bottom: 1.5rem;
 }
+
+.animeUp {
+  transform: translate3d(0, -10px, 0);
+  opacity: 0;
+  animation: animeUp 0.2s forwards;
+}
+
+@keyframes animeUp {
+  to {
+    transform: initial;
+    opacity: 1;
+  }
+}
