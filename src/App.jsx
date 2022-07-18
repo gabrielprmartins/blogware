@@ -1,7 +1,15 @@
 import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+import Router from "./Router";
+import Header from "./Components/Header";
 
-function App() {
-  return <h1>Home</h1>;
-}
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Header />
+      <Router />
+    </BrowserRouter>
+  );
+};
 
 export default App;

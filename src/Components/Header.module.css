@@ -1,0 +1,30 @@
+.header {
+  color: var(--white);
+  border-bottom: 1px solid var(--white-2);
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0rem 1.25rem;
+}
+
+.headerContainer a {
+  display: block;
+  transition: 0.2s;
+  border-bottom: 2px solid transparent;
+  padding: 2rem;
+}
+
+.headerContainer a:first-child {
+  border: none;
+  padding-bottom: calc(0.9rem + 2px);
+} 
+
+.headerContainer a:hover,
+.headerContainer a:global(.active) {
+  color: var(--blue);
+  border-color: var(--blue);
+}
