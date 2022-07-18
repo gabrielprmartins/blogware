@@ -21,8 +21,7 @@ const TagList = () => {
   React.useEffect(() => {
     async function fetchTags() {
       const { url, options } = API_GET(GET_TAGS);
-      const { json } = await request(url, options);
-      if (json) console.log(json.data.tags);
+      request(url, options);
     }
     fetchTags();
   }, []);

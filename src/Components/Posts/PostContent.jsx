@@ -24,25 +24,15 @@ const GET_POST_BY_SLUG = `
 
 const PostContent = () => {
   const { slug } = useParams();
-  const postContent = React.useRef();
   const { data, error, loading, request } = useFetch();
 
   React.useEffect(() => {
     async function fetchPost() {
       const { url, options } = API_GET(GET_POST_BY_SLUG, { slug });
-      const { response, json } = await request(url, options);
-      if (response.ok) {
-        parseToHTML(json.data.post.content.html);
-      }
+      request(url, options);
     }
     fetchPost();
   }, [slug]);
-
-  function parseToHTML(string) {
-    if (postContent.current && string) {
-      postContent.current.innerHTML = string;
-    }
-  }
 
   if (loading) return <Loading />;
   if (error) return <Error error={error} />;
@@ -61,9 +51,7 @@ const PostContent = () => {
           </div>
         </div>
 
-        <div className={styles.content} ref={postContent}>
-          {parseToHTML(data.data.post.content.html)}
-        </div>
+        <div className={styles.content}>{data.data.post.content.html}</div>
 
         <div className={styles.goToRecentPosts}>
           <Link to="/">← Voltar para posts recentes</Link>
