@@ -36,6 +36,13 @@ ul {
   color: var(--gray-1);
 }
 
+@media screen and (max-width: 680px) {
+  .title {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+  } 
+}
+
 .subtitle {
   display: block;
   font-size: 1rem;

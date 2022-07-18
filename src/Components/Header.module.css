@@ -27,3 +27,10 @@
   color: var(--blue);
   border-color: var(--blue);
 }
+
+@media screen and (max-width: 680px) {
+  .headerContainer a {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+}
