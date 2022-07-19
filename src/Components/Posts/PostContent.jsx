@@ -5,7 +5,8 @@ import useFetch from "../../Hooks/useFetch";
 import API_GET from "../../api";
 import Loading from "../Helpers/Loading";
 import Error from "../Helpers/Error";
-import Head from "../Head";
+import Head from "../Helpers/Head";
+import Date from "../Helpers/Date";
 
 const GET_POST_BY_SLUG = `
   query GetPostBySlug($slug: String) {
@@ -50,7 +51,7 @@ const PostContent = () => {
         <div className={styles.postTitle}>
           <h1 className="title">{data.data.post.title}</h1>
           <div className={styles.postInfo}>
-            <span>{data.data.post.date}</span>
+            <Date date={data.data.post.date} />
             <ul className={styles.tags}>
               {data.data.post.tags.map(({ id, name }) => (
                 <li key={id}>

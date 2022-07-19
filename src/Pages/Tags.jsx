@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "../Components/Head";
+import Head from "../Components/Helpers/Head";
 import PostsWithTag from "../Components/Posts/PostsWithTag";
 import TagList from "../Components/TagList";
 
