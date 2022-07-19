@@ -7,7 +7,7 @@ import PostList from "./PostList";
 
 const GET_POST_LIST = `
   query GetPostList {
-    posts {
+    posts (orderBy: publishedAt_ASC) {
       id
       title
       date

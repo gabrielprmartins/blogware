@@ -50,6 +50,14 @@
   color: var(--gray-1);
 }
 
+.content p > a {
+  color: var(--blue);
+}
+
+.content p > a:hover {
+  text-decoration: underline;
+}
+
 .content p + p {
   margin-top: 0.8rem;
 }
