@@ -37,6 +37,10 @@
 }
 
 .tags {
+  overflow-y: auto;
+}
+
+.tags ul {
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -45,6 +49,6 @@
   text-transform: uppercase;
 }
 
-.tags li {
+.tags ul > li {
   color: var(--blue);
 }

@@ -11,11 +11,13 @@ const PostList = ({ data }) => {
           <Date date={date} size={16} />
           <h2>{title}</h2>
           <p>{showcase.text}</p>
-          <ul className={styles.tags}>
-            {tags.map(({ name, id }) => (
-              <li key={id}>{name}</li>
-            ))}
-          </ul>
+          <div className={styles.tags}>
+            <ul>
+              {tags.map(({ name, id }) => (
+                <li key={id}>{name}</li>
+              ))}
+            </ul>
+          </div>
         </Link>
       ))}
     </section>
