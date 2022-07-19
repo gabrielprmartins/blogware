@@ -30,6 +30,10 @@ ul {
   margin: 0 auto;
 }
 
+.mainContainer {
+  margin-bottom: 3rem;
+}
+
 .title {
   font-weight: bold;
   font-size: 3rem;

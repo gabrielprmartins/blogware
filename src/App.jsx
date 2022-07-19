@@ -7,7 +7,9 @@ const App = () => {
   return (
     <BrowserRouter>
       <Header />
-      <Router />
+      <main className="mainContainer">
+        <Router />
+      </main>
     </BrowserRouter>
   );
 };
