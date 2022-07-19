@@ -46,7 +46,7 @@
 
 .content p {
   font-size: 1.1rem;
-  line-height: 1.5rem;
+  line-height: 2rem;
   color: var(--gray-1);
 }
 
@@ -80,5 +80,6 @@
   }
   .content p {
     font-size: 1rem;
+    line-height: 1.6rem;
   }
 }
