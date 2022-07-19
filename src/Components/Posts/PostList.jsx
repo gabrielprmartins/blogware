@@ -8,7 +8,7 @@ const PostList = ({ data }) => {
     <section className={`${styles.posts} animeUp`}>
       {data.posts.map(({ id, date, title, showcase, tags, slug }) => (
         <Link to={`/post/${slug}`} className={styles.post} key={id}>
-          <Date date={date} />
+          <Date date={date} size={16} />
           <h2>{title}</h2>
           <p>{showcase.text}</p>
           <ul className={styles.tags}>

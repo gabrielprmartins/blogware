@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "./Logo";
+import Logo from "../Assets/Logo";
+import TagIcon from "../Assets/TagIcon";
 import styles from "./Header.module.css";
 
 const Header = () => {
@@ -10,7 +11,9 @@ const Header = () => {
         <NavLink to="/">
           <Logo />
         </NavLink>
-        <NavLink to="tags">Tags</NavLink>
+        <NavLink to="tags" className={styles.tagsLink}>
+          <TagIcon size={21} /> Tags
+        </NavLink>
       </div>
     </header>
   );

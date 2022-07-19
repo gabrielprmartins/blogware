@@ -1,4 +1,5 @@
 import React from "react";
+import Calendar from "../../Assets/Calendar";
 
 const months = [
   "Janeiro",
@@ -15,7 +16,7 @@ const months = [
   "Dezembro",
 ];
 
-const Date = ({ date }) => {
+const Date = ({ date, size }) => {
   const [realDate, setRealDate] = React.useState("");
 
   React.useEffect(() => {
@@ -29,7 +30,11 @@ const Date = ({ date }) => {
     formatDate();
   }, [date]);
 
-  return <span>{realDate}</span>;
+  return (
+    <span className="date">
+      <Calendar size={size} /> {realDate}
+    </span>
+  );
 };
 
 export default Date;

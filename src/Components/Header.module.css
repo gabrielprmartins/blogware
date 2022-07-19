@@ -38,3 +38,17 @@
     padding-right: 0.8rem;
   }
 }
+
+.tagsLink {
+  display: flex;
+  align-items: flex-start;
+}
+
+.tagsLink svg {
+  margin-bottom: -3px;
+}
+
+.tagsLink:hover svg > *,
+.tagsLink:global(.active) svg > * {
+  fill: var(--blue);
+}

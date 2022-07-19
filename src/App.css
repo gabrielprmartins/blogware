@@ -66,3 +66,9 @@ ul {
     opacity: 1;
   }
 }
+
+.date {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
