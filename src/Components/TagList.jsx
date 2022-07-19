@@ -2,7 +2,6 @@ import React from "react";
 import useFetch from "../Hooks/useFetch";
 import API_GET from "../api";
 import styles from "./TagList.module.css";
-import Loading from "./Helpers/Loading";
 import Error from "./Helpers/Error";
 import { NavLink } from "react-router-dom";
 
@@ -16,7 +15,7 @@ const GET_TAGS = `
 `;
 
 const TagList = () => {
-  const { data, error, loading, request } = useFetch();
+  const { data, error, request } = useFetch();
 
   React.useEffect(() => {
     async function fetchTags() {
@@ -26,7 +25,6 @@ const TagList = () => {
     fetchTags();
   }, []);
 
-  if (loading) return <Loading />;
   if (error) return <Error error={error} />;
   if (data)
     return (
