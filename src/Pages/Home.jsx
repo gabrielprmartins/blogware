@@ -11,7 +11,7 @@ const Home = () => {
       <main className="main">
         <div>
           <h1 className="main-title">
-            <span>Tecnologia</span>, <br /> Front-End & <br />{" "}
+            <span>Tecnologia</span>, <br /> Front-End & <br />
             <span>Desenvolvimento</span> <br /> de <span>Software</span>
           </h1>
           <p className="main-paragraph">
@@ -22,6 +22,7 @@ const Home = () => {
           <MainIcon />
         </figure>
       </main>
+
       <h2 className="subtitle">Mais recentes</h2>
       <PostFeed />
     </section>
