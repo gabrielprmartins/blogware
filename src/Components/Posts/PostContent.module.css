@@ -45,8 +45,10 @@
 }
 
 .content p {
-  font-size: 1.1rem;
-  line-height: 2rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: medium;
   color: var(--gray-1);
 }
 

@@ -1,18 +1,18 @@
 :root {
-  --blue: #3667D9;
-  --gray-1: #2C3333;
-  --gray-2: #464D4D;
-  --gray-3: #696E6E;
-  --white-1: #FFFFFF; 
-  --white-2: #EEEEEE; 
-  --white-3: #DDDDDD; 
+  --blue: #3667d9;
+  --gray-1: #2c3333;
+  --gray-2: #464d4d;
+  --gray-3: #696e6e;
+  --white-1: #ffffff;
+  --white-2: #eeeeee;
+  --white-3: #dddddd;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   color: var(--gray-2);
 }
 
@@ -24,6 +24,13 @@ ul {
   list-style: none;
 }
 
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+}
+
 .container {
   max-width: 43.75rem;
   padding: 0 1.25rem;
@@ -32,6 +39,30 @@ ul {
 
 .mainContainer {
   margin-bottom: 3rem;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.main-title {
+  font-weight: bold;
+  font-size: 2.7rem;
+  color: var(--gray-1);
+}
+
+.main-title span,
+.main-paragraph span {
+  color: var(--blue);
+}
+
+.main-paragraph {
+  margin-top: 1rem;
+  color: var(--gray-1);
+  font-weight: bold;
 }
 
 .title {
@@ -45,7 +76,7 @@ ul {
   .title {
     font-size: 2rem;
     margin: 1.5rem 0;
-  } 
+  }
 }
 
 .subtitle {

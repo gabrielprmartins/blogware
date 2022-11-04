@@ -29,7 +29,8 @@ const PostFeed = () => {
   React.useEffect(() => {
     async function fetchData() {
       const { url, options } = API_GET(GET_POST_LIST);
-      request(url, options);
+      const { response } = await request(url, options);
+      console.log(response);
     }
     fetchData();
   }, []);

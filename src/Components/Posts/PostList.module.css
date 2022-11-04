@@ -2,7 +2,7 @@
   display: block;
 }
 
-.post:hover > h2{
+.post:hover > h2 {
   text-decoration: underline;
   color: var(--blue);
 }
@@ -27,7 +27,9 @@
 }
 
 .post p {
+  font-family: "Inter", sans-serif;
   color: var(--gray-3);
+  font-size: 1rem;
   line-height: 1.5;
   display: -webkit-box;
   -webkit-line-clamp: 3;
