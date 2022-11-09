@@ -11,8 +11,9 @@ const Home = () => {
       <main className="main">
         <div>
           <h1 className="main-title">
-            <span>Tecnologia</span>, <br /> Front-End & <br />
-            <span>Desenvolvimento</span> <br /> de <span>Software</span>
+            Tecnologia, <br /> <span>Front-End</span> & <br />
+            Desenvolvimento
+            <br /> de <span>Software</span>
           </h1>
           <p className="main-paragraph">
             Você programa? Seja <span>bem vindo(a)!</span>
