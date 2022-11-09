@@ -5,7 +5,7 @@
 
 ## :computer: Sobre
 
-**Blogware** é blog pra quem consome tecnologia e desenvolve aplicações Front-End.
+**Blogware** é blog pra quem consome tecnologia e desenvolve aplicações Front-End. Foi criado como forma de estudos em ReactJS, GraphQL e o CMS Hygraph.
 
 ![Show](show.gif)
 
