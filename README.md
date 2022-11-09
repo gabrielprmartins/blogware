@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="./src/Assets/g.svg"> <br>
+  <img src="./g.svg"> <br>
   Blogware
 </h1>
 
