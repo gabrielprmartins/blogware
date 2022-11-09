@@ -37,8 +37,15 @@ svg {
   margin: 0 auto;
 }
 
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh + 4.55rem);
+}
+
 .mainContainer {
   margin-bottom: 3rem;
+  flex: 1;
 }
 
 .main {

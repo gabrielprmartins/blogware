@@ -2,15 +2,19 @@ import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 import Router from "./Router";
 import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Header />
-      <main className="mainContainer">
-        <Router />
-      </main>
-    </BrowserRouter>
+    <div className="App">
+      <BrowserRouter>
+        <Header />
+        <main className="mainContainer">
+          <Router />
+        </main>
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 };
 
